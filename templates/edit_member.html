@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white py-3">
+                <h4 class="mb-0 fw-bold">✏️ แก้ไขข้อมูลสมาชิก</h4>
+            </div>
+            <div class="card-body p-4">
+                <form action="/members/edit/{{ member.id }}" method="post" enctype="multipart/form-data">
+                    <div class="text-center mb-4">
+                        {% if member.photo_path %}
+                        <img src="{{ url_for('static', path='members/' + member.photo_path) }}" 
+                             alt="{{ member.name }}" 
+                             class="rounded-circle border shadow-sm" 
+                             style="width: 100px; height: 100px; object-fit: cover;">
+                        {% else %}
+                        <div class="rounded-circle bg-light d-flex align-items-center justify-content-center border shadow-sm mx-auto" 
+                             style="width: 100px; height: 100px; font-size: 40px; color: #ccc;">
+                            👤
+                        </div>
+                        {% endif %}
+                        <div class="small text-muted mt-2">รูปถ่ายปัจจุบัน</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">ชื่อ-นามสกุล</label>
+                        <input type="text" name="name" class="form-control" value="{{ member.name }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">รหัสนักเรียน</label>
+                        <input type="text" name="student_id" class="form-control" value="{{ member.student_id }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">ชั้น / ห้อง</label>
+                        <input type="text" name="student_class" class="form-control" value="{{ member.student_class }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">ข้อมูลติดต่อ</label>
+                        <input type="text" name="contact" class="form-control" value="{{ member.contact }}" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold">เปลี่ยนรูปถ่าย (ถ้ามี)</label>
+                        <input type="file" name="photo" class="form-control" accept="image/*">
+                        <div class="form-text text-muted">หากไม่เลือกรูป ระบบจะใช้รูปเดิม</div>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary px-4 w-100">อัปเดตข้อมูล</button>
+                        <a href="/members" class="btn btn-outline-secondary px-4 w-100">ยกเลิก</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

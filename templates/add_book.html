@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white py-3">
+                <h4 class="mb-0 fw-bold">➕ เพิ่มหนังสือใหม่</h4>
+            </div>
+            <div class="card-body p-4">
+                <form action="/books/add" method="post">
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">ID หนังสือ (รันอัตโนมัติ)</label>
+                        <input type="text" class="form-control bg-light" value="{{ next_id }}" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">ชื่อหนังสือ</label>
+                        <input type="text" name="title" class="form-control" placeholder="เช่น ความรู้รอบตัว" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">ชื่อผู้แต่ง</label>
+                        <input type="text" name="author" class="form-control" placeholder="ชื่อผู้แต่งหนังสือ" required>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-semibold">ISBN</label>
+                            <input type="text" name="isbn" class="form-control" placeholder="เลขมาตรฐานสากล" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-semibold">หมวดหมู่</label>
+                            <select name="category_id" class="form-select" required>
+                                <option value="" disabled selected>-- เลือกหมวดหมู่ --</option>
+                                {% for cat in categories %}
+                                <option value="{{ cat.id }}">{{ cat.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold">จำนวนเล่มทั้งหมด</label>
+                        <input type="number" name="total_copies" class="form-control" value="1" min="1" required>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary px-4 w-100">บันทึกข้อมูล</button>
+                        <a href="/books" class="btn btn-outline-secondary px-4 w-100">ยกเลิก</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

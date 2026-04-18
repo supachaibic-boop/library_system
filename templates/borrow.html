@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white py-3">
+                <h4 class="mb-0 fw-bold">📖 ทำรายการยืมหนังสือ</h4>
+            </div>
+            <div class="card-body p-4">
+                <form action="/borrow" method="post">
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">เลือกหนังสือ</label>
+                        <select name="book_id" class="form-select" required>
+                            <option value="" selected disabled>-- กรุณาเลือกหนังสือ --</option>
+                            {% for book in books %}
+                            <option value="{{ book.id }}">{{ book.title }} (คงเหลือ: {{ book.available_copies }})</option>
+                            {% endfor %}
+                        </select>
+                        {% if not books %}
+                        <div class="text-danger small mt-1">❌ ไม่มีหนังสือที่ว่างให้ยืมในขณะนี้</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">เลือกสมาชิกผู้ยืม</label>
+                        <select name="member_id" class="form-select" required>
+                            <option value="" selected disabled>-- กรุณาเลือกสมาชิก --</option>
+                            {% for member in members %}
+                            <option value="{{ member.id }}">{{ member.name }} ({{ member.student_id }})</option>
+                            {% endfor %}
+                        </select>
+                        {% if not members %}
+                        <div class="text-danger small mt-1">❌ กรุณาเพิ่มสมาชิกในระบบก่อน</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold">กำหนดวันคืนหนังสือ</label>
+                        <input type="date" name="due_date" id="due_date" class="form-control" required>
+                        
+                        <div class="mt-2">
+                            <label class="small text-muted d-block mb-1">เลือกจำนวนวันที่ต้องการยืม:</label>
+                            <div class="d-flex gap-2" id="duration-buttons">
+                                <button type="button" class="btn btn-outline-primary btn-sm flex-fill duration-btn" onclick="setDueDate(this, 3)">3 วัน</button>
+                                <button type="button" class="btn btn-outline-primary btn-sm flex-fill duration-btn" onclick="setDueDate(this, 7)">7 วัน</button>
+                                <button type="button" class="btn btn-outline-primary btn-sm flex-fill duration-btn" onclick="setDueDate(this, 14)">14 วัน</button>
+                            </div>
+                        </div>
+                        <div class="form-text text-muted mt-2">ระบุวันที่ต้องคืนหนังสือให้ชัดเจน</div>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary px-4 w-100 fw-bold">ยืนยันการยืม</button>
+                        <a href="/" class="btn btn-outline-secondary px-4 w-100">ยกเลิก</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function setDueDate(element, days) {
+    const dateInput = document.getElementById('due_date');
+    const today = new Date();
+    today.setDate(today.getDate() + days);
+    
+    // Format date to YYYY-MM-DD
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+    
+    dateInput.value = `${year}-${month}-${day}`;
+
+    // Update button colors
+    const buttons = document.querySelectorAll('.duration-btn');
+    buttons.forEach(btn => {
+        btn.classList.remove('btn-primary');
+        btn.classList.add('btn-outline-primary');
+    });
+    
+    element.classList.remove('btn-outline-primary');
+    element.classList.add('btn-primary');
+}
+</script>
+{% endblock %}

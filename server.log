@@ -1,0 +1,597 @@
+INFO:     Will watch for changes in these directories: ['/home/oracle/.openclaw/workspace']
+INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+INFO:     Started reloader process [2325] using StatReload
+INFO:     Started server process [2327]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.1.142:16873 - "GET /books/add HTTP/1.1" 200 OK
+INFO:     192.168.1.142:39931 - "POST /books/add HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:39931 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:39931 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:39931 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:39931 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:39931 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:39931 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:39931 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:39931 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:39931 - "GET /books/add HTTP/1.1" 200 OK
+INFO:     192.168.1.142:45881 - "POST /books/add HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:45881 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:21137 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:17965 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:17965 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:39540 - "GET /return/4 HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:39540 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:40548 - "GET /return/5 HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:40548 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:51037 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:55731 - "GET /books/edit/2 HTTP/1.1" 200 OK
+INFO:     192.168.1.142:55731 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:22242 - "GET /books/edit/1 HTTP/1.1" 200 OK
+INFO:     192.168.1.142:22242 - "GET /books/edit/2 HTTP/1.1" 200 OK
+INFO:     192.168.1.142:35685 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:35685 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:35685 - "GET /books/edit/1 HTTP/1.1" 200 OK
+INFO:     192.168.1.142:47762 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:47762 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:47762 - "GET /categories HTTP/1.1" 200 OK
+INFO:     192.168.1.142:47762 - "GET /members HTTP/1.1" 200 OK
+INFO:     192.168.1.142:47762 - "GET /members/edit/1 HTTP/1.1" 200 OK
+INFO:     192.168.1.142:47762 - "POST /members/edit/1 HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:47762 - "GET /members HTTP/1.1" 200 OK
+INFO:     192.168.1.142:47762 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:47762 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:21746 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:21746 - "GET /categories HTTP/1.1" 200 OK
+INFO:     192.168.1.142:21746 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:21746 - "GET /categories HTTP/1.1" 200 OK
+INFO:     192.168.1.142:21746 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:21746 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:21746 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:21746 - "GET /categories HTTP/1.1" 200 OK
+INFO:     192.168.1.142:21746 - "GET /members HTTP/1.1" 200 OK
+INFO:     192.168.1.142:21746 - "GET /static/members/e699bd04-9fcf-42f4-b9d8-35db11031561.jpg HTTP/1.1" 304 Not Modified
+INFO:     192.168.1.142:24107 - "GET /static/members/5af4516c-1b9c-4b20-aae1-e87f1e30bd46.jpg HTTP/1.1" 304 Not Modified
+INFO:     192.168.1.142:39965 - "GET /static/members/dca1388b-31cc-45bc-b843-40da9144cbf2.jpg HTTP/1.1" 304 Not Modified
+INFO:     192.168.1.142:24107 - "GET /members HTTP/1.1" 200 OK
+INFO:     192.168.1.142:24107 - "GET /categories HTTP/1.1" 200 OK
+INFO:     192.168.1.142:24107 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:24107 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:24107 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:24107 - "GET /categories HTTP/1.1" 200 OK
+INFO:     192.168.1.142:24107 - "GET /members HTTP/1.1" 200 OK
+INFO:     192.168.1.142:24107 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:24107 - "GET /books/edit/1 HTTP/1.1" 200 OK
+INFO:     192.168.1.142:26775 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:33428 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:33428 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:5932 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:5932 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:18630 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:9163 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:9163 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:30801 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:30801 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:30801 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:42386 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:42386 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:23918 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:61917 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:61917 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:50863 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:50863 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:1890 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:12509 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:12509 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:51429 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:51429 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:5450 - "GET /return/9 HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:5450 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:9016 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:9016 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:57745 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:57745 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:57745 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:12650 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:12650 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:12650 - "GET /return/10 HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:12650 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:39798 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:39443 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:39443 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:39443 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:39443 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:39443 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:39443 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:39443 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:39443 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:39443 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:39443 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:39443 - "GET /return/11 HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:39443 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:6363 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:6363 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:6363 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:6363 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:47589 - "GET /return/7 HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:47589 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:47589 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:17227 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:17227 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:47385 - "GET /borrow HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'library_system/models.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2327]
+INFO:     Started server process [2748]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.1.142:57949 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:57949 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:57949 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:57949 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:57949 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:57949 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:57949 - "GET /categories HTTP/1.1" 200 OK
+INFO:     192.168.1.142:57949 - "GET /members HTTP/1.1" 200 OK
+INFO:     192.168.1.142:57949 - "GET /categories HTTP/1.1" 200 OK
+INFO:     192.168.1.142:57949 - "GET /categories HTTP/1.1" 200 OK
+INFO:     192.168.1.142:57949 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:57949 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:57949 - "GET /return/12 HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:57949 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:8627 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:8627 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:8627 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:8627 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:8627 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:8627 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:8627 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:14679 - "GET /logs HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:24975 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:24975 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:24975 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:24975 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:24975 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:24975 - "GET /members HTTP/1.1" 200 OK
+INFO:     192.168.1.142:24975 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:24975 - "GET /categories HTTP/1.1" 200 OK
+INFO:     192.168.1.142:24975 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:24975 - "GET /categories HTTP/1.1" 200 OK
+INFO:     192.168.1.142:24975 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:24975 - "GET /categories HTTP/1.1" 200 OK
+INFO:     192.168.1.142:24975 - "GET /members HTTP/1.1" 200 OK
+INFO:     192.168.1.142:24975 - "GET /logs HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:40002 - "GET /logs HTTP/1.1" 404 Not Found
+WARNING:  StatReload detected changes in 'library_system/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2748]
+INFO:     Started server process [2894]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'library_system/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2894]
+INFO:     Started server process [2899]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'library_system/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2899]
+INFO:     Started server process [2902]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'library_system/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2902]
+INFO:     Started server process [2905]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'library_system/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2905]
+INFO:     Started server process [2908]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'library_system/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2908]
+INFO:     Started server process [2915]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'library_system/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2915]
+INFO:     Started server process [2918]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'library_system/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2918]
+INFO:     Started server process [2930]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'library_system/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2930]
+INFO:     Started server process [2933]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.1.142:12405 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:12405 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:5184 - "GET /return/6 HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:5184 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:5184 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:5184 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:5184 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:5184 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:5184 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:5184 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:5184 - "GET /return/8 HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:5184 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:5184 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:25067 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:25067 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:25067 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:25067 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:25067 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:25067 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:25067 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:25067 - "GET /members HTTP/1.1" 200 OK
+INFO:     192.168.1.142:25067 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:25067 - "GET /members HTTP/1.1" 200 OK
+INFO:     192.168.1.142:25067 - "GET /categories HTTP/1.1" 200 OK
+INFO:     192.168.1.142:25067 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:25067 - "GET /logs HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'library_system/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2933]
+INFO:     Started server process [3168]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.1.142:29901 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:29901 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:42324 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:42324 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:42324 - "GET /return/13 HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:42324 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:42324 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:9397 - "GET /members HTTP/1.1" 200 OK
+INFO:     192.168.1.142:9397 - "GET /categories HTTP/1.1" 200 OK
+INFO:     192.168.1.142:9397 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:9397 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:32256 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:24635 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:24635 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:61039 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:61039 - "GET /books/add HTTP/1.1" 200 OK
+INFO:     192.168.1.142:45221 - "POST /books/add HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:45221 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:45221 - "GET /logs HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'library_system/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3168]
+INFO:     Started server process [3264]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.1.142:22087 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:22087 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:22087 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:22087 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:22087 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:49959 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:49959 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:49959 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:49959 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:25301 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:25301 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:25301 - "GET /members HTTP/1.1" 200 OK
+INFO:     192.168.1.142:25301 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:45168 - "GET /categories HTTP/1.1" 200 OK
+INFO:     192.168.1.142:45168 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:45168 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:45168 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:45168 - "GET / HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'library_system/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3264]
+INFO:     Started server process [3350]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.1.142:40701 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:40701 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:40701 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:40701 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:40701 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:65123 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:65123 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:65123 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:65123 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:65123 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:65123 - "GET /logs HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'library_system/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3350]
+INFO:     Started server process [3429]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.1.142:15023 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:15023 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:15023 - "GET /return/14 HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:15023 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:15023 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:15023 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:15023 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:17634 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:17634 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:50998 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:50998 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:24557 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:40514 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:40514 - "GET /members HTTP/1.1" 200 OK
+INFO:     192.168.1.142:40514 - "GET /static/members/e699bd04-9fcf-42f4-b9d8-35db11031561.jpg HTTP/1.1" 304 Not Modified
+INFO:     192.168.1.142:42480 - "GET /static/members/dca1388b-31cc-45bc-b843-40da9144cbf2.jpg HTTP/1.1" 304 Not Modified
+INFO:     192.168.1.142:32581 - "GET /static/members/5af4516c-1b9c-4b20-aae1-e87f1e30bd46.jpg HTTP/1.1" 304 Not Modified
+INFO:     192.168.1.142:32581 - "GET /categories HTTP/1.1" 200 OK
+INFO:     192.168.1.142:32581 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:32581 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:1723 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:25423 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:25423 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:25423 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:39235 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:39235 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:39235 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:25199 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:25199 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:25199 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:62942 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:62942 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:14042 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:5442 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:5442 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:43247 - "GET /members HTTP/1.1" 200 OK
+INFO:     192.168.1.142:43247 - "GET /categories HTTP/1.1" 200 OK
+INFO:     192.168.1.142:43247 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:43247 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:16896 - "GET /categories HTTP/1.1" 200 OK
+INFO:     192.168.1.142:16896 - "GET /members HTTP/1.1" 200 OK
+INFO:     192.168.1.142:16896 - "GET /categories HTTP/1.1" 200 OK
+INFO:     192.168.1.142:16896 - "GET /members HTTP/1.1" 200 OK
+INFO:     192.168.1.142:16896 - "GET /categories HTTP/1.1" 200 OK
+INFO:     192.168.1.142:16896 - "GET /members HTTP/1.1" 200 OK
+INFO:     192.168.1.142:16896 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:17869 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:58810 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:58810 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:7015 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:50802 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:31620 - "GET /return/20 HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:31620 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:31620 - "GET /logs HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'library_system/database.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3429]
+INFO:     Started server process [3611]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'library_system/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3611]
+INFO:     Started server process [3685]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.1.142:40081 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:40081 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:65116 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:33715 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:33715 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:59837 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:59837 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:59837 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:59837 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:59837 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:59837 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:59837 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:59837 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:59837 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:59837 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:59837 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:59837 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:2036 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:2036 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:2036 - "GET / HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'library_system/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3685]
+INFO:     Started server process [3921]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.1.142:27933 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:27933 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:28321 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:2619 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:2619 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:2619 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:7076 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:7076 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:7076 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:24336 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:24336 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:24336 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:48376 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:48376 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:35912 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:8959 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:8959 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:8959 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:8959 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:23607 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:62279 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:62279 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:6035 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:18905 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:18905 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:34567 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:39974 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:39974 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:1365 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:47050 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:47050 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:47050 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:56640 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:56640 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:56640 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:30338 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:30338 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:30338 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:47803 - "GET /books/edit/1 HTTP/1.1" 200 OK
+INFO:     192.168.1.142:59499 - "POST /books/edit/1 HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:59499 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:59499 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:59499 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:1487 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:1487 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:1487 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:22688 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:22688 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:38328 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:38328 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:35830 - "GET /borrow HTTP/1.1" 200 OK
+INFO:     192.168.1.142:35830 - "POST /borrow HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:35830 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:61900 - "GET /categories HTTP/1.1" 200 OK
+INFO:     192.168.1.142:61900 - "GET /members HTTP/1.1" 200 OK
+INFO:     192.168.1.142:61900 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:1303 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:1303 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:58811 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:58811 - "GET /categories HTTP/1.1" 200 OK
+INFO:     192.168.1.142:58811 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:6129 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:6129 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:6129 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:6129 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:6129 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:6129 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:6129 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:6129 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:6129 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:48208 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:48208 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:35844 - "GET /return/25 HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:35844 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:35844 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:49008 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:38582 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:38582 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:38582 - "GET /books HTTP/1.1" 200 OK
+INFO:     192.168.1.142:38582 - "GET /categories HTTP/1.1" 200 OK
+INFO:     192.168.1.142:38582 - "GET /members HTTP/1.1" 200 OK
+INFO:     192.168.1.142:15303 - "GET /members/add HTTP/1.1" 200 OK
+INFO:     192.168.1.142:62322 - "POST /members/add HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:62322 - "GET /members HTTP/1.1" 200 OK
+INFO:     192.168.1.142:62322 - "GET /static/members/344ff5e0-ba9f-4717-afd4-728528b68f93.jpg HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'library_system/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3921]
+INFO:     Started server process [4240]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.1.142:30735 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:59458 - "GET /return/15 HTTP/1.1" 303 See Other
+INFO:     192.168.1.142:59458 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.1.142:21290 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:21290 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:21290 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.142:21554 - "GET / HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'library_system/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [4240]
+INFO:     Started server process [4274]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.1.142:23840 - "GET /logs HTTP/1.1" 200 OK
+INFO:     192.168.1.142:23840 - "GET / HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'library_system/database.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [4274]
+Process SpawnProcess-21:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/oracle/.local/lib/python3.10/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "/home/oracle/.local/lib/python3.10/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/oracle/.local/lib/python3.10/site-packages/uvicorn/server.py", line 69, in serve
+    await self._serve(sockets)
+  File "/home/oracle/.local/lib/python3.10/site-packages/uvicorn/server.py", line 76, in _serve
+    config.load()
+  File "/home/oracle/.local/lib/python3.10/site-packages/uvicorn/config.py", line 434, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/oracle/.local/lib/python3.10/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/oracle/.openclaw/workspace/library_system/main.py", line 13, in <module>
+    from .database import get_db, engine, Base
+  File "/home/oracle/.openclaw/workspace/library_system/database.py", line 25
+    ifT = "sqlite" not in SQLALCHEMY_DATABASE_URL:
+                                                 ^
+SyntaxError: invalid syntax
+WARNING:  StatReload detected changes in 'library_system/database.py'. Reloading...
+INFO:     Started server process [4454]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.

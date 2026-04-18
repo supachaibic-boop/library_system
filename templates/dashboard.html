@@ -1,0 +1,240 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-12">
+        <h2 class="fw-bold">แดชบอร์ดภาพรวม</h2>
+        <p class="text-muted">วันที่ปัจจุบัน: {{ today.strftime('%d-%m-%Y') }}</p>
+    </div>
+</div>
+
+<!-- Stats Cards -->
+<div class="row g-3 mb-5">
+    <div class="col-md-4">
+        <div class="card border-0 shadow-sm text-center h-100">
+            <div class="card-body p-4">
+                <div class="display-6 fw-bold text-primary mb-2">{{ total_books }}</div>
+                <div class="text-muted uppercase fw-semibold">จำนวนหนังสือทั้งหมด</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card border-0 shadow-sm text-center h-100">
+            <div class="card-body p-4">
+                <div class="display-6 fw-bold text-success mb-2">{{ total_members }}</div>
+                <div class="text-muted uppercase fw-semibold">จำนวนสมาชิกทั้งหมด</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card border-0 shadow-sm text-center h-100">
+            <div class="card-body p-4">
+                <div class="display-6 fw-bold text-warning mb-2">{{ active_loans|length }}</div>
+                <div class="text-muted uppercase fw-semibold">หนังสือที่ถูกยืมอยู่</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Overdue Loans Section -->
+    <div class="col-lg-4">
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-header bg-white py-3">
+                <h5 class="mb-0 fw-bold text-danger">⚠️ รายการหนังสือที่เกินกำหนดคืน</h5>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>ชื่อหนังสือ</th>
+                                <th>สมาชิก</th>
+                                <th>กำหนดคืน</th>
+                                <th>จัดการ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% if overdue_loans %}
+                                {% for loan in overdue_loans %}
+                                <tr>
+                                    <td>{{ loan.book.title }}</td>
+                                    <td>{{ loan.member.name }}</td>
+                                    <td class="text-danger fw-bold">{{ loan.due_date.strftime('%d-%m-%Y') }}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-success" 
+                                            onclick="showReturnModal('{{ loan.id }}', '{{ loan.member.name }}', '{{ loan.book.title }}', '{{ loan.due_date }}')">รับคืน</button>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            {% else %}
+                                <tr>
+                                    <td colspan="4" class="text-center text-muted py-4">ไม่มีรายการเกินกำหนดคืน</td>
+                                </tr>
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Active Loans Section -->
+    <div class="col-lg-8">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
+                <h5 class="mb-0 fw-bold">📖 การยืมล่าสุด <span class="text-muted fs-6 fw-normal">({{ active_loans|length }} รายการ)</span></h5>
+                <div class="d-flex gap-2">
+                    <input type="text" id="loanSearch" class="form-control form-control-sm" placeholder="ค้นหาหนังสือ/ผู้ยืม..." onkeyup="filterLoans()">
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive" style="max-height: 600px; overflow-y: auto;">
+                    <table class="table table-hover mb-0" id="loansTable">
+                        <thead class="table-light sticky-top">
+                            <tr style="white-space: nowrap;">
+                                <th style="width: 30%;">ชื่อหนังสือ</th>
+                                <th style="width: 15%;">ISBN</th>
+                                <th style="width: 15%;">ผู้ยืม</th>
+                                <th style="width: 15%;">เบอร์โทร</th>
+                                <th style="width: 10%;" class="text-end">วันคืน</th>
+                                <th style="width: 15%;" class="text-center">จัดการ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% if active_loans %}
+                                {% for loan in active_loans %}
+                                <tr>
+                                    <td class="fw-bold">{{ loan.book.title }}</td>
+                                    <td>{{ loan.book.isbn }}</td>
+                                    <td>{{ loan.member.name }}</td>
+                                    <td>{{ loan.member.contact }}</td>
+                                    <td class="text-end"><span class="badge bg-info text-dark">{{ loan.due_date.strftime('%d-%m-%Y') }}</span></td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-sm btn-outline-success" 
+                                                onclick="showReturnModal('{{ loan.id }}', '{{ loan.member.name }}', '{{ loan.book.title }}', '{{ loan.due_date }}')">รับคืน</button>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            {% else %}
+                                <tr class="search-no-result">
+                                    <td colspan="6" class="text-center text-muted py-4">ไม่มีการยืมในขณะนี้</td>
+                                </tr>
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Return Confirmation Modal -->
+<div class="modal fade" id="returnModal" tabindex="-1" aria-labelledby="returnModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+            <div class="modal-header bg-light">
+                <h5 class="modal-title fw-bold" id="returnModalLabel">ยืนยันการรับคืนหนังสือ</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+                <div class="row g-3">
+                    <div class="col-12">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">ผู้ยืม:</span>
+                            <span id="modal-member-name" class="fw-bold">-</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">หนังสือ:</span>
+                            <span id="modal-book-title" class="fw-bold">-</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">กำหนดคืน:</span>
+                            <span id="modal-due-date" class="fw-bold">-</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">วันที่คืนจริง:</span>
+                            <span id="modal-return-date" class="fw-bold text-primary">-</span>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center p-2 bg-light rounded">
+                            <span class="fw-bold text-danger">คืนสาย:</span>
+                            <span id="modal-overdue-days" class="fw-bold text-danger fs-5">- วัน</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer bg-light">
+                <button type="button" class="btn btn-outline-secondary px-4" data-bs-dismiss="modal">ยกเลิก</button>
+                <a href="#" id="modal-confirm-btn" class="btn btn-success px-4 fw-bold">ยืนยันการคืน</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function filterLoans() {
+    const input = document.getElementById('loanSearch');
+    const filter = input.value.toLowerCase();
+    const table = document.getElementById('loansTable');
+    const tr = table.getElementsByTagName('tr');
+
+    let visibleCount = 0;
+    for (let i = 1; i < tr.length; i++) {
+        let rowText = tr[i].textContent || tr[i].innerText;
+        if (rowText.toLowerCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+            visibleCount++;
+        } else {
+            tr[i].style.display = "none";
+        }
+    }
+}
+
+function showReturnModal(loanId, memberName, bookTitle, dueDate) {
+    try {
+        // Populate basic info
+        document.getElementById('modal-member-name').innerText = memberName;
+        document.getElementById('modal-book-title').innerText = bookTitle;
+        document.getElementById('modal-due-date').innerText = dueDate;
+        
+        // Calculate return date (today)
+        const today = new Date();
+        const todayStr = today.toISOString().split('T')[0];
+        document.getElementById('modal-return-date').innerText = todayStr;
+        
+        // Calculate overdue days (Calendar days difference)
+        const todayDate = new Date(todayStr); // Set to midnight local
+        const dueDateStr = dueDate; // "YYYY-MM-DD"
+        const dueDateObj = new Date(dueDateStr); // Set to midnight UTC/Local
+        
+        // Normalize both to midnight to avoid time-of-day issues
+        const t = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+        const d = new Date(dueDateObj.getFullYear(), dueDateObj.getMonth(), dueDateObj.getDate());
+        
+        const diffTime = t - d;
+        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+        
+        const overdueElement = document.getElementById('modal-overdue-days');
+        if (diffDays > 0) {
+            overdueElement.innerText = diffDays + ' วัน';
+            overdueElement.className = 'fw-bold text-danger fs-5';
+        } else {
+            overdueElement.innerText = 'ไม่สาย';
+            overdueElement.className = 'fw-bold text-success fs-5';
+        }
+        
+        // Set confirm button link
+        document.getElementById('modal-confirm-btn').href = `/return/${loanId}`;
+        
+        // Show modal using getOrCreateInstance for better compatibility
+        const modalElement = document.getElementById('returnModal');
+        const modal = bootstrap.Modal.getOrCreateInstance(modalElement);
+        modal.show();
+    } catch (error) {
+        console.error('Error showing return modal:', error);
+        alert('เกิดข้อผิดพลาดในการเปิดหน้าต่างยืนยัน กรุณาลองอีกครั้ง หรือรีเฟรชหน้าจอ');
+    }
+}
+</script>
+{% endblock %}

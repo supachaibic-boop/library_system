@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white py-3">
+                <h4 class="mb-0 fw-bold">➕ เพิ่มสมาชิกใหม่</h4>
+            </div>
+            <div class="card-body p-4">
+                <!-- ต้องเพิ่ม enctype="multipart/form-data" เพื่อให้ส่งไฟล์รูปภาพได้ -->
+                <form action="/members/add" method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">ชื่อ-นามสกุล</label>
+                        <input type="text" name="name" class="form-control" placeholder="ระบุชื่อและนามสกุล" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">รหัสนักเรียน</label>
+                        <input type="text" name="student_id" class="form-control" placeholder="เช่น 67001" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">ชั้น / ห้อง</label>
+                        <input type="text" name="student_class" class="form-control" placeholder="เช่น ม.1/2" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">ข้อมูลติดต่อ</label>
+                        <input type="text" name="contact" class="form-control" placeholder="เบอร์โทรศัพท์ หรือ Line ID" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold">รูปถ่ายนักเรียน</label>
+                        <input type="file" name="photo" class="form-control" accept="image/*">
+                        <div class="form-text text-muted">รองรับไฟล์รูปภาพ (.jpg, .png, .webp)</div>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary px-4 w-100">บันทึกข้อมูล</button>
+                        <a href="/members" class="btn btn-outline-secondary px-4 w-100">ยกเลิก</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

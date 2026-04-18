@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="fw-bold mb-0">📂 จัดการหมวดหมู่หนังสือ</h2>
+    <a href="/categories/add" class="btn btn-primary px-4">➕ เพิ่มหมวดหมู่ใหม่</a>
+</div>
+
+<div class="card border-0 shadow-sm">
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-hover mb-0 align-middle">
+                <thead class="table-light">
+                    <tr>
+                        <th>ID</th>
+                        <th>ชื่อหมวดหมู่</th>
+                        <th class="text-center">จำนวนหนังสือในหมวดนี้</th>
+                        <th class="text-center">จัดการ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if categories %}
+                        {% for cat in categories %}
+                        <tr>
+                            <td>{{ cat.id }}</td>
+                            <td class="fw-semibold">{{ cat.name }}</td>
+                            <td class="text-center">{{ cat.books|length }} เล่ม</td>
+                            <td class="text-center">
+                                <div class="btn-group">
+                                    <a href="/categories/edit/{{ cat.id }}" class="btn btn-sm btn-outline-primary">แก้ไข</a>
+                                    <a href="/categories/delete/{{ cat.id }}" class="btn btn-sm btn-outline-danger" onclick="return confirm('ยืนยันการลบหมวดหมู่นี้? หนังสือในหมวดนี้อาจได้รับผลกระทบ')">ลบ</a>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="4" class="text-center text-muted py-5">
+                                ไม่พบข้อมูลหมวดหมู่ในขณะนี้
+                            </td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

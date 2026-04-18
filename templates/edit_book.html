@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white py-3">
+                <h4 class="mb-0 fw-bold">✏️ แก้ไขข้อมูลหนังสือ</h4>
+            </div>
+            <div class="card-body p-4">
+                <form action="/books/edit/{{ book.id }}" method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">ชื่อหนังสือ</label>
+                        <input type="text" name="title" class="form-control" value="{{ book.title }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">ชื่อผู้แต่ง</label>
+                        <input type="text" name="author" class="form-control" value="{{ book.author }}" required>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-semibold">ISBN</label>
+                            <input type="text" name="isbn" class="form-control" value="{{ book.isbn }}" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-semibold">หมวดหมู่</label>
+                            <select name="category_id" class="form-select" required>
+                                {% for cat in categories %}
+                                <option value="{{ cat.id }}" {% if book.category_id == cat.id %}selected{% endif %}>{{ cat.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">จำนวนเล่มทั้งหมด</label>
+                        <input type="number" name="total_copies" class="form-control" value="{{ book.total_copies }}" min="1" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold">รูปภาพหน้าปก</label>
+                        <input type="file" name="photo" class="form-control">
+                        {% if book.photo_path %}
+                        <div class="mt-2">
+                            <img src="/static/books/{{ book.photo_path }}" class="img-thumbnail" style="max-height: 100px;">
+                        </div>
+                        {% endif %}
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary px-4 w-100">อัปเดตข้อมูล</button>
+                        <a href="/books" class="btn btn-outline-secondary px-4 w-100">ยกเลิก</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
