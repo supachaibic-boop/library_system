@@ -10,9 +10,9 @@ from typing import List, Optional
 import shutil
 import uuid
 
-from .database import get_db, engine, Base
-from .models import Book, Member, Loan, Category, Log
-from .schemas import BookCreate, MemberCreate
+from database import get_db, engine, Base
+from models import Book, Member, Loan, Category, Log
+from schemas import BookCreate, MemberCreate
 
 app = FastAPI()
 
